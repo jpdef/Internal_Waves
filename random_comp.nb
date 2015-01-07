@@ -1,0 +1,302 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     10105,        292]
+NotebookOptionsPosition[      9114,        254]
+NotebookOutlinePosition[      9450,        269]
+CellTagsIndexPosition[      9407,        266]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"ContourPlot", "[", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"t", "*", 
+       RowBox[{"(", 
+        RowBox[{"k", "/", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"k", "^", "2"}], "+", 
+           RowBox[{"m", "^", "2"}]}], "]"}]}], ")"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", 
+       RowBox[{"-", "16"}], ",", "16"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"m", ",", 
+       RowBox[{"-", "16"}], ",", "16"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+   RowBox[{"AnimationRunning", "\[Rule]", "false"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.622207720466662*^9, 3.622207780656823*^9}, {
+  3.6222078296980762`*^9, 3.6222079298579683`*^9}, {3.622209772676468*^9, 
+  3.6222097769612427`*^9}, {3.622209825882889*^9, 3.622209910064274*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 2.717683792114258, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 20}}, Typeset`size$$ = {360., {173., 178.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`t$31062$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$31062$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ContourPlot[
+        Cos[$CellContext`t$$ ($CellContext`k/
+          Sqrt[$CellContext`k^2 + $CellContext`m^2])], {$CellContext`k, -16, 
+         16}, {$CellContext`m, -16, 16}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 20, 
+         AnimationRunning -> $CellContext`false, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{407., {208., 215.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.622209912028926*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"k_", ",", "m_"}], "]"}], ":=", 
+  RowBox[{"N", "[", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"3", "*", 
+     RowBox[{"(", 
+      RowBox[{"k", "/", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"k", "+", "1"}], ")"}], "^", "2"}], "+", 
+         RowBox[{
+          RowBox[{"(", "m", ")"}], "^", "2"}]}], "]"}]}], ")"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6222078835722113`*^9, 3.622207919727641*^9}, {
+  3.62220823656676*^9, 3.622208240183351*^9}, {3.622210162748131*^9, 
+  3.622210169929187*^9}, {3.62221101320123*^9, 3.622211043816724*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"trans", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"i", ",", "j"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"-", "8"}], ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", 
+       RowBox[{"-", "8"}], ",", "8"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6222081353083973`*^9, 3.622208273080411*^9}, {
+   3.622208528609514*^9, 3.6222085329910107`*^9}, {3.622209164682366*^9, 
+   3.622209169871645*^9}, {3.6222092438168364`*^9, 3.622209256865295*^9}, {
+   3.622209395857843*^9, 3.622209420186543*^9}, {3.622209462206933*^9, 
+   3.6222094947207203`*^9}, {3.622209570628499*^9, 3.62220966417599*^9}, {
+   3.622209705496595*^9, 3.622209710050022*^9}, {3.622210466304675*^9, 
+   3.62221047282465*^9}, {3.622210579897386*^9, 3.622210605755568*^9}, 
+   3.622210688849028*^9, {3.622210789736912*^9, 3.622210816337647*^9}, {
+   3.622210868897596*^9, 3.622210926625474*^9}, {3.6222110007527018`*^9, 
+   3.622211006535261*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
+encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
+\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.6222108935365543`*^9, 3.6222109275883102`*^9}, {
+  3.6222110222115803`*^9, 3.62221105413525*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"real", " ", "=", " ", 
+   RowBox[{"Re", "[", 
+    RowBox[{"InverseFourier", "[", "trans", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.622208275921537*^9, 3.622208333843071*^9}, {
+  3.622209101020309*^9, 3.622209109975112*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"InverseFourier", "::", "fftl"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\({\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)}\\)\[NoBreak] is not a non-empty list or rectangular \
+array of numeric quantities. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/InverseFourier/fftl\\\", ButtonNote -> \
+\\\"InverseFourier::fftl\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6222109298013887`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TableForm", "[", "real", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.622208451637669*^9, 3.622208488793384*^9}, 
+   3.6222091757722807`*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6222085569748163`*^9, 3.62220859719659*^9}, {
+   3.622209071866962*^9, 3.622209086932394*^9}, 3.622209117907157*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6222090685187607`*^9, 3.622209068603264*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.622208591222774*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f2", "[", 
+   RowBox[{"x_", ",", "z_", ",", "t_"}], "]"}], ":=", 
+  RowBox[{"NIntegrate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"k", "/", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"k", "^", "2"}], "+", 
+           RowBox[{"m", "^", "2"}]}], "]"}]}], ")"}], " ", "t"}], "]"}], " ", 
+     
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"k", " ", "x"}], "+", 
+       RowBox[{"m", " ", "z"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", 
+      RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"m", ",", 
+      RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.622211504705797*^9, 3.622211504707539*^9}, {
+  3.622211632907201*^9, 3.6222116499397573`*^9}, {3.6222117423561296`*^9, 
+  3.622211762995738*^9}, {3.622212188813862*^9, 3.622212250075219*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f2", "[", 
+  RowBox[{"0", ",", "0", ",", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6222122229047613`*^9, 3.622212238714623*^9}}],
+
+Cell[BoxData["8.458879215869825`"], "Output",
+ CellChangeTimes->{{3.622212227634885*^9, 3.6222122570222597`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{"f2", "[", 
+    RowBox[{"x", ",", "z", ",", "0"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.622212268292499*^9, 3.62221230783119*^9}, {
+  3.622212676369636*^9, 3.622212678008348*^9}}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.622212672336487*^9, 3.6222128368621807`*^9}]
+}, Open  ]]
+},
+WindowSize->{767, 848},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 918, 24, 55, "Input"],
+Cell[1500, 48, 2034, 41, 440, "Output"]
+}, Open  ]],
+Cell[3549, 92, 674, 19, 32, "Input"],
+Cell[CellGroupData[{
+Cell[4248, 115, 1063, 22, 32, "Input"],
+Cell[5314, 139, 523, 11, 43, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5874, 155, 272, 6, 32, "Input"],
+Cell[6149, 163, 555, 11, 42, "Message"]
+}, Open  ]],
+Cell[6719, 177, 177, 4, 32, "Input"],
+Cell[6899, 183, 165, 2, 32, "Input"],
+Cell[7067, 187, 94, 1, 32, InheritFromParent],
+Cell[7164, 190, 87, 1, 55, "Input"],
+Cell[7254, 193, 968, 28, 55, "Input"],
+Cell[CellGroupData[{
+Cell[8247, 225, 156, 3, 32, "Input"],
+Cell[8406, 230, 113, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8556, 236, 438, 12, 32, "Input"],
+Cell[8997, 250, 101, 1, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
